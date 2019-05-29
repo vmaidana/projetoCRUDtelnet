@@ -1,0 +1,23 @@
+CREATE SCHEMA `bd_tecnicos_tel` DEFAULT CHARACTER SET utf8 COLLATE utf8_bin;
+
+CREATE TABLE `bd_tecnicos_tel`.`tecnicos` (
+  `id_tecnicos` INT NOT NULL AUTO_INCREMENT,
+  `nome` VARCHAR(50) NOT NULL,
+  `nascimento` DATE NOT NULL,
+  `RG` VARCHAR(15) NOT NULL,
+  `cpf` VARCHAR(15) NOT NULL,
+  `cep` VARCHAR(10) NOT NULL,
+  `rua` VARCHAR(50) NULL,
+  `numero` INT NULL,
+  `complemento` VARCHAR(10) NULL,
+  `bairro` VARCHAR(50) NULL,
+  `estado` VARCHAR(2) NULL,
+  `cidade` VARCHAR(50) NULL,
+  `email` VARCHAR(50) NOT NULL,
+  `login` VARCHAR(10) NOT NULL,
+  `senha` VARCHAR(12) NOT NULL,
+  PRIMARY KEY (`id_tecnicos`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_bin;
+

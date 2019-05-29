@@ -1,0 +1,24 @@
+nav#menu ol{
+    list-style: none;
+    text-transform: uppercase;
+    position: absolute;
+    top: 15px;
+    left: 300px;  
+}
+    
+nav#menu li{
+    display: inline-block;
+    background-color:darkred;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+nav#menu a {
+    color: snow;
+    text-decoration: none;
+}
+
+nav#menu ol :hover{
+    background-color: orange;
+    text-decoration: underline
+}
