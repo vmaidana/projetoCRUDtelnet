@@ -1,37 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>inserir Técnico</title>
-    <!--css menu-->
-    <link rel="stylesheet" href="menu.css"> 
-    <!--css header-->
-    <link rel="stylesheet" href="header.css">
-</head>
-<body>
-    <header style="padding: 10px">
-        <div style="float: left; background-color:darkred; color:snow; padding:5px">
-            <h1>TELNET</h1>
-        </div>
-        <!--menu-->
-        <nav id="menu">
-            <ol> 
-                <li><a href="cadastroTecnico.html">cadastrar técnico</a></li>
-                <li><a href="listaTecnicos.php">Listar técnicos</a></li>
-            </ol>
-        </nav>
-        <!--fim menu-->
-    </header>
-
-    <div style="padding: 60px">
-        <!--div transição-->
-    </div>
-
-    <!--div php-->
-    <div style="background-color: rgba(216, 229, 240, 0.3); border: 1px solid rgba(147, 184, 189, 0.8); padding: 10px">
-    <?php
+<?php
 
         // atribuindo as variáveis para inserção na tabela
         $nome = $_POST["nome"];
@@ -55,7 +22,7 @@
             $sql = "INSERT INTO tecnicos (nome, nascimento, rg, cpf, cep, rua, numero, complemento, bairro, estado, cidade, email, login, senha)
                 VALUES('$nome', '$dataNascimento', '$rg', '$cpf','$cep', '$rua', '$numero', '$complemento', '$bairro', '$estado', '$cidade', '$email', '$login', '$senha')";
             $conn->exec($sql);
-            echo "<h1 align=center>Salvo com sucesso</h1>";
+            echo "<h1 align=center>Técnico cadastrado com sucesso</h1>";
         } // fim do try
         catch(PDOException $e)
         {

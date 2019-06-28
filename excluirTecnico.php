@@ -43,8 +43,17 @@
             // excluir o registro na tabela
             $sql = $conn->prepare("DELETE FROM tecnicos WHERE id_tecnicos=".$id);
             $sql->execute();
-            if($sql->rowCount()>0)
-                echo "<h1 align=center>Excluído com sucesso!</h1>";
+            if($sql->rowCount()>0){
+                ?>
+
+                    <!--script com feedback e retorno para página de listagem-->
+                    <script type="text/javascript">
+                    alert ("Técnico excluído com sucesso");
+                    document.location.href="index.php"
+                    </script>
+
+                <?php
+            }
             else
                 echo "<h1 align=center>Não foi possível excluir</h1>";
         
